@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Crear Pizzas</title>
+        <style>
+            div {
+                width: 400px;
+                text-align: right;
+                padding-bottom: 10px;
+            }
+
+            input {
+                width: 160px;
+
+            }
+
+            #enviar {
+                width: 80px;
+                background-color: gray;
+                color: white;
+
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th {
+
+                border: 2px groove rgba(73, 108, 155, 0.87);
+                background-color: gray;
+                color: white;
+                padding: 5px;
+                text-align: center;
+            }
+
+            td {
+                border-collapse: collapse;
+                text-align: center;
+                border: 1px groove gray;
+            }
+        </style>
+</head>
+<h1>Crear nueva pizza</h1>
+<body>
+    <form action="/pizzas/add" method="POST" class="ui form">
+        <div >
+            <h1>Alta nueva pizza</h1>
+            <div class="field">
+                <label>Nombre:</label>
+                <input type="text" name="nombre">
+            </div>
+            <div class="field">
+                <label>Imagen</label>
+                <input type="text" name="imageReference">
+            </div>
+            <button class="ui button" type="submit">Aceptar</button>
+        </div>
+    </form>
+</body>
+
+</html>

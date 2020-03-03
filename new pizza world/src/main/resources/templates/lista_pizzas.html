@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html   lang="es"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Pizzas</title>
+    <style>
+        div{
+            width:400px;
+            text-align: right;
+            padding-bottom: 10px;
+            }
+        input{
+            width: 160px;
+            
+            }
+        #enviar{
+            width: 80px;
+            background-color: gray;
+            color: white;
+
+            }
+        table{
+            width: 100%;
+        }
+        th{
+           
+            border: 2px groove rgba(73,108,155,0.87);
+            background-color: gray;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            }
+        td{
+            border-collapse: collapse;
+            text-align: center;
+            border: 1px groove gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Listado pizzas</h1>
+        <div>
+            <table id="list">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="pizza : ${pizzas}">
+                        <td th:text="${pizza.id}"></td>
+                        <td th:text="${pizza.nombre}"></td>
+                        <td th:text="${pizza.imageReference}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    </form>
+
+
+    
+</body>
+</html>
